@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            font-family: 'Ubuntu', sans-serif;
+        }
+        body {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        }
+        #body {
+        margin-top: 22%;
+    
+        }
+
+        .fundo{
+        background-color:#FFFFFF;
+        }
+        .fundo1{
+        background-color:#0000FF;
+        }
+        .botao{
+            padding: 5px;
+        }
+        
+        
+    </style>
+    <script language="javascript" type="text/javascript">
+        
+        function trocar(){
+            var obj=document.getElementById('body');
+            if(obj.className=='fundo'){
+                obj.className='fundo1';
+            }
+        }
+
+        function voltar() {
+            var obj=document.getElementById('body');
+            if (obj.className== 'fundo1') {
+                obj.className='fundo'
+            }
+        }
+
+    </script>
+</head>
+<body id="body" class="fundo">
+    <input class="botao" type="button" value="Azul" href="#" onclick="trocar();"> <br/>
+    <input class="botao" type="button" value="Branco" href="#" onclick="voltar();">
+    </body>
+</html>

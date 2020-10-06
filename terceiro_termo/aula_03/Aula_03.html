@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        function calcularCombustiveis() {
+            var x;
+            const gasolina = prompt("digite a gasolina");
+            const alcool = prompt("digite o alcool");
+            const vantagem = gasolina * 0.7;
+            if (alcool <= vantagem) {
+                x=("Vai de alcool"); 
+            }
+            else{
+                x=("Vai de gasosa")
+            }
+            document.getElementById("calculoGasosa").innerHTML = x;
+        }
+    </script>
+<body>
+    <p>Postos SENAI</p>
+    <button onclick="calcularCombustiveis()">Clique aqui</button>
+    <p id="calculoGasosa"></p>
+</body>
+</html>

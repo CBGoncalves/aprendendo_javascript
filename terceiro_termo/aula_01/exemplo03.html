@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 03</title>
+    <script>
+        function funcao2() {
+            // var define uma variavel qualquer
+            var x;
+            /*confirm = caixa de dialogo com uma mensagem definida no parâmetro e dois botões ok (true) e cancelar (false)*/
+            var r=confirm("Escolha um valor!");
+            // se o botao ok for pressionado quer dizer que r e igual a true e a variavel x retorna a mensagem "Você pressionou OK"
+            if (r==true)
+            {
+                x="Você pressionou OK";
+            }
+            // se o botao cancelar for pressionado quer dizer que r e igual a false e a variavel x retorna a mensagem "Você pressionou Cancelar!"
+            else
+            {
+                x="Você pressionou Cancelar!";
+            }
+            /* o método getElementById() retorna o elemento, que no caso e a variavel x, que tem o ID com o valor, que no caso e demo, especificado
+            nesse caso para especificar qual elemento recebe aquele valor usamos a propriedade innerHTML que faz aquele elemento retornar um conteudo HTML */
+            document.getElementById("demo").innerHTML=x;
+        }
+    </script>
+</head>
+<body>
+    <h1>Exemplo JS-03</h1>
+
+    <!--input do tipo button que ao ser clicado realiza a funcao2() que mostra um uma caixa do tipo confirm-->
+    <input type="button" onclick="funcao2()" value="Exibir Confirm">
+    <!--tag <p> que recebe id do elemento x e retorna a mensagem de acordo com o botao pressionado-->
+    <p id="demo"></p>
+</body>
+</html>

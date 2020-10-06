@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 04</title>
+</head>
+<body>
+    <h1>Exemplo JS-04</h1>
+    <p>Clique para exibir.</p>
+    <!--tag <input> do tipo button que ao ser pressionado realiza a funcao3 que gera uma caixa de dialogo do tipo prompt-->
+    <button onclick="funcao3()">Clique aqui</button>
+    <!--tag <p> que recebe id do elemento x e retorna a mensagem de acordo com a idade inserida no campo-->
+    <p id="demo"></p>
+    <script>
+        function funcao3() {
+            var x;
+            // gera uma caixa de dialogo do tipo prompt que retorna um campo que precisa ser preenchido pelo usuario onde nesse caso sera colocada a idade desse usuario
+            var idade=prompt("Digite sua idade:");
+            // se a idade for diferente de nulo x retorna a uma mensagem com a idade do usuario dentro do paragrafo que recebe o valor de x "Idade: 18 anos"
+            if (idade!=null) {
+
+                x="Idade: " + idade + " anos."
+            }
+            /* getElementById define o valor de x como "demo"
+               innerHTML retorna x como um conteudo HTML
+            */
+            document.getElementById("demo").innerHTML=x;
+        }
+    </script>
+</body>
+</html>

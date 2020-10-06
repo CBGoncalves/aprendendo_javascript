@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function chuva() {
+            var x;
+            var c = confirm("Ta chovendo ai meu querido?")
+            if (c==true) {
+
+                x=("VAI TIRAR A ROUPA DO VARAU ENTÃO!!!");
+            }
+            else{
+                x=("então ta tudo certo");
+            }
+            document.getElementById("chovendo").innerHTML=x;
+
+        }
+       
+    </script>
+
+    <script>
+        function myFunction()
+        {
+            var x;
+            var idade=prompt("Digite sua idade:");
+            if (idade!=null)
+            {
+            x="Idade: " + idade + " anos.";
+            if (idade >= 18) {
+                x=("Você pode comprar bebida")
+            }else
+            {
+                x=("Você não pode comprar bebida")
+            }
+            document.getElementById("demo").innerHTML=x;
+        }
+        }
+    </script>
+
+    <script>
+        function pontosCarteira() {
+            var x;
+            var pontos=prompt("Digite seus pontos:");
+
+            if ((pontos > 1)||(pontos < 20)) {
+                x=("Você ainda pode dirigir")
+            }else
+            {
+                x=("Você não pode dirigir, vá pagar suas multas")
+            }
+            document.getElementById("pontos").innerHTML=x 
+        }
+            
+    </script>
+
+    <script>
+        
+    </script>
+</head>
+<body>
+    <h1>JavaScript - 02</h1>
+    <input type="button" onclick="chuva()" value="Exibir Confirm">
+    <p id="chovendo"></p>
+
+    <p>Clique para exibir.</p>
+    <button onclick="myFunction()">Clique aqui</button>
+    <p id="demo"></p>
+    
+    <p>DETRAN</p>
+    <button onclick="pontosCarteira()">Clique aqui</button>
+    <p id="pontos"></p>
+</body>
+</html>

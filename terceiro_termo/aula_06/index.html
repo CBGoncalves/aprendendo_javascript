@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Manipulando o Estilo do Site</title>
+</head>
+<body>
+    <div id="manipula">Eu sou a frase do exemplo. Serei alterada quando você clicar.</div>
+    <hr>
+    <h2>Altere a frase acima clicando nos botões</h2>
+    <button id="mudaCor" onclick="mudaCor()">Muda cor da fonte </button>
+    <input id="voltaCor" type="button" style="display: none" value="Voltar cor da fonte" onclick="voltaCor()" />
+
+    <input id="mudaTamanhoFonte" type="button" value="Muda tamanho da fonte" onclick="mudaTamanhoFonte()"/>
+    <input id="voltaTamanhoFonte" type="button" style="display: none" value="Voltar tamanho da fonte" onclick="voltaTamanhoFonte()" />
+
+    <input id="mudaBackground" type="button" value="Muda background" onclick="mudaBackground()"/>
+    <input id="voltaBackground" type="button" style="display: none" value="Voltar a cor do background" onclick="voltaBackground()" />
+
+    <br><br>
+    <input id="mudaItalico" type="button" value="Deixa em italico" onclick="mudaItalico()"/>
+    <input id="voltaItalico" type="button" style="display: none" value="Retornar para o estado padrão" onclick="voltaItalico()">
+
+    <input id="colocaBorder" type="button" value="Coloca borda" onclick="colocaBorder()"/>
+
+    <input id="corBorder" type="button" value="Muda a cor da borda" onclick="corBorder()"/>
+    <input id="voltaCorBorder" type="button" style="display: none" value="Retornar a cor padrão" onclick="voltaCorBorder()">
+
+    <br><br>
+    <input type="button" value="Exclui borda" onclick="excluiBorder()"/>
+
+    <input type="button" value="Esconde a div" onclick="escondeDiv()"/>
+
+    <input type="button" value="Reaparece com a div" onclick="reapareceDiv()"/>
+
+    <script src="script.js"></script>
+</body>
+</html>

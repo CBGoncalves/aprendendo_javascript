@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // FOREACH ----------------------------------
+        var carros = ['Jetta', 'Golf', 'Celta'];
+        carros.forEach(function (carro) {
+            console.log(carro)
+        });
+        // Jetta,Golf, Celta
+
+        // MAP ----------------------------------------
+        var numeros = [5, 6, 8];
+        var triplo = numeros.map(function (numero) {
+            return numero * 3;
+        });
+
+        console.log(numeros); // [5, 6, 8]
+        console.log(triplo); // [15, 18, 24]
+
+        // FILTER ---------------------------------------
+        var pessoas = [
+            {nome:'Marcelo', sexo:'Masculino', idade:25},
+            {nome:'Julia', sexo:'Feminino', idade:22},
+            {nome:'Rafaela', sexo:'Feminino', idade:19}
+        ];
+
+        var sexoPessoas = pessoas.filter(function (pessoa) {
+           return pessoa.sexo == 'Feminino'; 
+        });
+
+        console.log(sexoPessoas); // {nome:'Julia', sexo:'Feminino', idade:22}, {nome:'Rafaela', sexo:'Feminino', idade:19}
+
+        // FIND -------------------------------------------
+        var pessoa = pessoas.find(function (pessoa) {
+            return pessoa.nome === 'Marcelo';
+        });
+
+        console.log(pessoa); //{nome:'Marcelo', sexo:'Masculino', idade:25}
+
+        // EVERY ---------------------------------------------
+        var todasPessoasMulheres = pessoas.every(function (pessoa) {
+            return pessoa.sexo == 'Feminino';
+        });
+
+        console.log(todasPessoasMulheres); // false
+
+        // SOME -----------------------------------------------
+        var idades = [18, 25, 60, 35]
+        var temPessoaAcimaDaIdadePermitida = idades.some(function (idade) {
+            return idade > 50;
+        });
+
+        console.log(temPessoaAcimaDaIdadePermitida); // true
+
+        // REDUCE ----------------------------------------------
+        var precos = [25, 90, 60];
+
+        var soma = 0;
+        soma = precos.reduce(function (soma,preco) {
+            return soma + preco
+        })
+
+        console.log(soma); // 175
+    </script>
+</body>
+</html>
+
+
